@@ -94,7 +94,7 @@ nav a.nl:hover i{transform:translateY(-100%)}
 #burger{display:none;flex-direction:column;gap:6px;padding:8px;z-index:102}
 #burger i{display:block;width:26px;height:2px;background:var(--ink);transition:.35s var(--ease)}
 @media(max-width:1080px){
-  nav{position:fixed;inset:0;background:var(--ink);color:var(--bone);flex-direction:column;justify-content:center;gap:10px;transform:translateY(-102%);transition:transform .6s var(--ease)}
+  nav{position:fixed;inset:0;z-index:101;background:var(--ink);color:var(--bone);flex-direction:column;justify-content:center;gap:10px;transform:translateY(-102%);transition:transform .6s var(--ease);overflow-y:auto}
   body.menu-open nav{transform:none}
   nav a.nl{font-family:var(--disp);font-stretch:125%;font-size:clamp(30px,9vw,52px);height:1.15em;text-transform:uppercase;font-weight:760;letter-spacing:0}
   nav a.nl i+i{color:var(--green)}
@@ -388,6 +388,7 @@ body.ready #hero .cap{width:1.5em}
 #about .val p{margin-top:11px;font-size:13.5px;line-height:1.55;color:var(--mute);max-width:27ch;transition:color .4s}
 #about .val:hover p{color:#3A3835}
 #about .team{margin-top:clamp(56px,9vh,110px);display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:clamp(18px,2.4vw,30px)}
+@media(max-width:560px){#about .team{grid-template-columns:repeat(2,1fr);gap:14px}.member .ph{aspect-ratio:1/1}.member .ph .init{font-size:40px}}
 .member{transition:transform .45s var(--ease)}
 .member:hover{transform:translateY(-7px)}
 .member .ph{aspect-ratio:3/4;border-radius:12px;background:var(--bone);border:1.5px solid var(--ink);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;transition:border-color .4s,box-shadow .4s}
