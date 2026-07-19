@@ -94,11 +94,11 @@ nav a.nl:hover i{transform:translateY(-100%)}
 #burger{display:none;flex-direction:column;gap:6px;padding:8px;z-index:102}
 #burger i{display:block;width:26px;height:2px;background:var(--ink);transition:.35s var(--ease)}
 @media(max-width:1080px){
-  nav{position:fixed;inset:0;background:var(--ink);color:var(--bone);flex-direction:column;justify-content:center;gap:10px;transform:translateY(-102%);transition:transform .6s var(--ease)}
-  body.menu-open nav{transform:none}
-  nav a.nl{font-family:var(--disp);font-stretch:125%;font-size:clamp(30px,9vw,52px);height:1.15em;text-transform:uppercase;font-weight:760;letter-spacing:0}
+  nav{position:fixed;inset:0;z-index:101;background:var(--ink);color:var(--bone);flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:8px;padding:100px var(--pad) 44px;transform:translateY(-102%);visibility:hidden;transition:transform .6s var(--ease),visibility 0s .6s;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  body.menu-open nav{transform:none;visibility:visible;transition:transform .6s var(--ease)}
+  nav a.nl{font-family:var(--disp);font-stretch:125%;font-size:clamp(27px,7.6vw,46px);height:1.16em;text-transform:uppercase;font-weight:760;letter-spacing:0}
   nav a.nl i+i{color:var(--green)}
-  nav .lang{margin-top:28px;border-color:var(--bone)}
+  nav .lang{margin-top:30px;border-color:var(--bone);flex-wrap:wrap}
   nav .lang button.on{background:var(--green);color:var(--ink)}
   #burger{display:flex}
   body.menu-open #burger i{background:var(--bone)}
@@ -388,6 +388,7 @@ body.ready #hero .cap{width:1.5em}
 #about .val p{margin-top:11px;font-size:13.5px;line-height:1.55;color:var(--mute);max-width:27ch;transition:color .4s}
 #about .val:hover p{color:#3A3835}
 #about .team{margin-top:clamp(56px,9vh,110px);display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:clamp(18px,2.4vw,30px)}
+@media(max-width:560px){#about .team{grid-template-columns:repeat(2,1fr);gap:14px}.member .ph{aspect-ratio:1/1}.member .ph .init{font-size:40px}}
 .member{transition:transform .45s var(--ease)}
 .member:hover{transform:translateY(-7px)}
 .member .ph{aspect-ratio:3/4;border-radius:12px;background:var(--bone);border:1.5px solid var(--ink);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;transition:border-color .4s,box-shadow .4s}
@@ -737,15 +738,15 @@ footer .base{font-size:13px}
    "pt": "Greencave — Operação criativa para todas as telas",
    "en": "Greencave — Creative operations for every screen",
    "es": "Greencave — Operación creativa para todas las pantallas",
-   "zh": "Greencave — 面向每一块屏幕的创意运营",
+   "zh": "Greencave — 覆盖所有屏幕的创意运营",
    "no": "Greencave — Kreativ drift for alle skjermer"
   },
   "desc": {
    "pt": "Operação criativa para agências, marcas, canais e eventos. Design, motion, 3D e branded content — desde 2017, em São Paulo.",
    "en": "Creative operations for agencies, brands, channels and events. Design, motion, 3D and branded content — since 2017, based in São Paulo.",
-   "es": "Operação criativa para agências, marcas, canais e eventos. Design, motion, 3D e branded content — desde 2017, em São Paulo.",
-   "zh": "Operação criativa para agências, marcas, canais e eventos. Design, motion, 3D e branded content — desde 2017, em São Paulo.",
-   "no": "Operação criativa para agências, marcas, canais e eventos. Design, motion, 3D e branded content — desde 2017, em São Paulo."
+   "es": "Operación creativa para agencias, marcas, canales y eventos. Design, motion, 3D y branded content — desde 2017, en São Paulo.",
+   "zh": "服务代理机构、品牌、频道与活动的创意运营。设计、动态、3D 与品牌内容 —— 自 2017 年起，总部圣保罗。",
+   "no": "Kreativ drift for byråer, merkevarer, kanaler og eventer. Design, motion, 3D og branded content — siden 2017, fra São Paulo."
   }
  },
  "ui": {
@@ -781,36 +782,36 @@ footer .base{font-size:13px}
    "pt": "Hub criativo — São Paulo, Brasil",
    "en": "Creative hub — São Paulo, Brazil",
    "es": "Hub creativo — São Paulo, Brasil",
-   "zh": "创意中心 — 巴西圣保罗",
+   "zh": "创意枢纽 — 巴西圣保罗",
    "no": "Kreativt hub — São Paulo, Brasil"
   },
   "hero_sub": {
    "pt": "A gente entra quando a demanda aperta. Trabalhamos plugados em times de marca, canais, agências e produtoras, cuidando de design, motion e conteúdo com o mesmo padrão de quem está lá dentro — e, de vez em quando, ajudando a inventar o produto inteiro. Desde 2017.",
    "en": "We step in when the workload gets heavy. We work plugged into brand teams, channels, agencies and production companies, handling design, motion and content at an in-house standard — and, every now and then, helping invent the whole product. Since 2017.",
-   "es": "A gente entra quando a demanda aperta. Trabalhamos plugados em times de marca, canais, agências e produtoras, cuidando de design, motion e conteúdo com o mesmo padrão de quem está lá dentro — e, de vez em quando, ajudando a inventar o produto inteiro. Desde 2017.",
-   "zh": "A gente entra quando a demanda aperta. Trabalhamos plugados em times de marca, canais, agências e produtoras, cuidando de design, motion e conteúdo com o mesmo padrão de quem está lá dentro — e, de vez em quando, ajudando a inventar o produto inteiro. Desde 2017.",
-   "no": "A gente entra quando a demanda aperta. Trabalhamos plugados em times de marca, canais, agências e produtoras, cuidando de design, motion e conteúdo com o mesmo padrão de quem está lá dentro — e, de vez em quando, ajudando a inventar o produto inteiro. Desde 2017."
+   "es": "Entramos cuando la demanda aprieta. Trabajamos conectados a equipos de marca, canales, agencias y productoras, cuidando design, motion y contenido con el mismo estándar de quien está adentro — y, de vez en cuando, ayudando a inventar el producto entero. Desde 2017.",
+   "zh": "需求吃紧时我们就位。我们嵌入品牌团队、频道、代理机构与制作公司，以内部团队的标准打理设计、动态与内容 —— 偶尔，还帮忙从零发明整个产品。自 2017 年起。",
+   "no": "Vi trår til når arbeidsmengden strammer til. Vi jobber koblet til merkevareteam, kanaler, byråer og produksjonsselskaper, og tar hånd om design, motion og innhold med samme standard som et internt team — og av og til hjelper vi med å finne opp hele produktet. Siden 2017."
   },
   "hero_cta1": {
    "pt": "Ver trabalhos",
    "en": "See our work",
    "es": "Ver trabajos",
    "zh": "查看作品",
-   "no": "Se arbeidene"
+   "no": "Se arbeid"
   },
   "hero_cta2": {
    "pt": "Falar com a gente",
    "en": "Talk to us",
-   "es": "Hablemos",
-   "zh": "联系我们",
+   "es": "Hablar con nosotros",
+   "zh": "与我们聊聊",
    "no": "Snakk med oss"
   },
   "clients_label": {
    "pt": "Confiança de quem faz mídia todos os dias",
    "en": "Trusted by people who make media every day",
-   "es": "La confianza de quienes hacen medios todos los días",
-   "zh": "深受每天与媒体打交道的伙伴信赖",
-   "no": "Betrodd av dem som lager media hver dag"
+   "es": "Confianza de quien hace medios todos los días",
+   "zh": "每日媒体工作者的信赖",
+   "no": "Tillit fra dem som lager media hver dag"
   },
   "services_eyebrow": {
    "pt": "Serviços",
@@ -823,8 +824,8 @@ footer .base{font-size:13px}
    "pt": "O que *fazemos*",
    "en": "What we *do*",
    "es": "Lo que *hacemos*",
-   "zh": "我们*做什么*",
-   "no": "Hva vi *gjør*"
+   "zh": "我们*做*的事",
+   "no": "Det vi *gjør*"
   },
   "works_eyebrow": {
    "pt": "Estrutura & escala",
@@ -857,9 +858,9 @@ footer .base{font-size:13px}
   "about_manifesto": {
    "pt": "Depois de quase 10 anos rodando operação criativa para marca, agência e canal, aprendemos uma coisa: o que funciona é virar time, não fornecedor. Isso não se explica em briefing — se prova no segundo projeto, no terceiro, no décimo. É isso que fazemos aqui: entramos na rotina, entendemos o contexto e entregamos no ritmo que o negócio pede.",
    "en": "After almost 10 years running creative operations for brands, agencies and channels, we learned one thing: what works is becoming a team, not a vendor. That's not something you explain in a briefing — it proves itself on the second project, the third, the tenth. That's what we do here: we join the routine, understand the context, and deliver at the pace the business needs.",
-   "es": "Depois de quase 10 anos rodando operação criativa para marca, agência e canal, aprendemos uma coisa: o que funciona é virar time, não fornecedor. Isso não se explica em briefing — se prova no segundo projeto, no terceiro, no décimo. É isso que fazemos aqui: entramos na rotina, entendemos o contexto e entregamos no ritmo que o negócio pede.",
-   "zh": "Depois de quase 10 anos rodando operação criativa para marca, agência e canal, aprendemos uma coisa: o que funciona é virar time, não fornecedor. Isso não se explica em briefing — se prova no segundo projeto, no terceiro, no décimo. É isso que fazemos aqui: entramos na rotina, entendemos o contexto e entregamos no ritmo que o negócio pede.",
-   "no": "Depois de quase 10 anos rodando operação criativa para marca, agência e canal, aprendemos uma coisa: o que funciona é virar time, não fornecedor. Isso não se explica em briefing — se prova no segundo projeto, no terceiro, no décimo. É isso que fazemos aqui: entramos na rotina, entendemos o contexto e entregamos no ritmo que o negócio pede."
+   "es": "Después de casi 10 años operando creatividad para marcas, agencias y canales, aprendimos una cosa: lo que funciona es volverse equipo, no proveedor. Eso no se explica en un briefing — se demuestra en el segundo proyecto, en el tercero, en el décimo. Eso hacemos aquí: entramos en la rutina, entendemos el contexto y entregamos al ritmo que pide el negocio.",
+   "zh": "为品牌、代理机构与频道运营创意近十年，我们学到一件事：有效的方式是成为团队，而不是供应商。这在简报里讲不清 —— 要在第二个、第三个、第十个项目里证明。我们做的就是这个：融入日常，理解语境，按业务需要的节奏交付。",
+   "no": "Etter nesten 10 år med kreativ drift for merkevarer, byråer og kanaler har vi lært én ting: det som fungerer er å bli et team, ikke en leverandør. Det forklares ikke i en briefing — det bevises i det andre prosjektet, det tredje, det tiende. Det er det vi gjør her: vi går inn i rutinen, forstår konteksten og leverer i tempoet virksomheten trenger."
   },
   "contact_eyebrow": {
    "pt": "Contato",
@@ -872,8 +873,8 @@ footer .base{font-size:13px}
    "pt": "Vamos criar *juntos*?",
    "en": "Let's create *together*?",
    "es": "¿Creamos *juntos*?",
-   "zh": "一起*创造*点什么？",
-   "no": "Skal vi skape noe *sammen*?"
+   "zh": "一起*创造*吧？",
+   "no": "Skal vi skape *sammen*?"
   },
   "ui_view": {
    "pt": "Ver case",
@@ -921,28 +922,28 @@ footer .base{font-size:13px}
    "pt": "Redes",
    "en": "Social",
    "es": "Redes",
-   "zh": "社交",
-   "no": "Sosialt"
+   "zh": "社交媒体",
+   "no": "Sosiale medier"
   },
   "f_nav": {
    "pt": "Navegar",
    "en": "Explore",
-   "es": "Explorar",
-   "zh": "导航",
-   "no": "Utforsk"
+   "es": "Navegar",
+   "zh": "浏览",
+   "no": "Naviger"
   },
   "f_rights": {
    "pt": "Todos os direitos reservados",
    "en": "All rights reserved",
    "es": "Todos los derechos reservados",
    "zh": "版权所有",
-   "no": "Alle rettigheter reservert"
+   "no": "Med enerett"
   },
   "f_admin": {
    "pt": "Área do time",
    "en": "Team area",
    "es": "Área del equipo",
-   "zh": "团队入口",
+   "zh": "团队专区",
    "no": "Teamområde"
   },
   "ui_drag": {
@@ -962,7 +963,7 @@ footer .base{font-size:13px}
   "ui_next": {
    "pt": "Próximo case",
    "en": "Next case",
-   "es": "Siguiente caso",
+   "es": "Próximo caso",
    "zh": "下一个案例",
    "no": "Neste case"
   },
@@ -970,21 +971,21 @@ footer .base{font-size:13px}
    "pt": "Disponível para novos projetos",
    "en": "Available for new projects",
    "es": "Disponible para nuevos proyectos",
-   "zh": "接受新项目合作",
+   "zh": "可承接新项目",
    "no": "Tilgjengelig for nye prosjekter"
   },
   "tab_away": {
    "pt": "● Greencave — de volta ao ar quando você voltar",
    "en": "● Greencave — back on air when you return",
    "es": "● Greencave — de vuelta al aire cuando regreses",
-   "zh": "● Greencave — 等你回来继续播出",
-   "no": "● Greencave — på lufta igjen når du er tilbake"
+   "zh": "● Greencave — 你回来时继续播出",
+   "no": "● Greencave — tilbake på lufta når du kommer tilbake"
   },
   "hero_meta": {
    "pt": "Est. 2017 · São Paulo — Brasil",
    "en": "Est. 2017 · São Paulo — Brazil",
    "es": "Est. 2017 · São Paulo — Brasil",
-   "zh": "始于 2017 · 巴西圣保罗",
+   "zh": "成立于 2017 年 · 巴西圣保罗",
    "no": "Etablert 2017 · São Paulo — Brasil"
   },
   "loader_hint": {
@@ -998,7 +999,7 @@ footer .base{font-size:13px}
    "pt": "Para quem",
    "en": "Who it's for",
    "es": "Para quién",
-   "zh": "为谁而做",
+   "zh": "服务对象",
    "no": "For hvem"
   },
   "quem_title": {
@@ -1053,23 +1054,23 @@ footer .base{font-size:13px}
   "lab_eyebrow": {
    "pt": "A parte que pouca gente conhece",
    "en": "The part few people know",
-   "es": "A parte que pouca gente conhece",
-   "zh": "A parte que pouca gente conhece",
-   "no": "A parte que pouca gente conhece"
+   "es": "La parte que pocos conocen",
+   "zh": "少有人知道的部分",
+   "no": "Delen få kjenner til"
   },
   "lab_title": {
    "pt": "Do conceito ao *produto*",
    "en": "From concept to *product*",
-   "es": "Do conceito ao *produto*",
-   "zh": "Do conceito ao *produto*",
-   "no": "Do conceito ao *produto*"
+   "es": "Del concepto al *producto*",
+   "zh": "从概念到*产品*",
+   "no": "Fra konsept til *produkt*"
   },
   "lab_intro": {
    "pt": "Nem tudo que a gente faz cabe em entregável. Há quase uma década, parceiros — de gigantes de mídia a fundadores — nos chamam pra tirar produto e formato do papel: conceito, design de serviço, MVP, lançamento. Essa via não tem vitrine. Tem histórico.",
    "en": "Not everything we do fits in a deliverable. For almost a decade, partners — from media giants to founders — have called us to take products and formats off the page: concept, service design, MVP, launch. This track has no storefront. It has a track record.",
-   "es": "Nem tudo que a gente faz cabe em entregável. Há quase uma década, parceiros — de gigantes de mídia a fundadores — nos chamam pra tirar produto e formato do papel: conceito, design de serviço, MVP, lançamento. Essa via não tem vitrine. Tem histórico.",
-   "zh": "Nem tudo que a gente faz cabe em entregável. Há quase uma década, parceiros — de gigantes de mídia a fundadores — nos chamam pra tirar produto e formato do papel: conceito, design de serviço, MVP, lançamento. Essa via não tem vitrine. Tem histórico.",
-   "no": "Nem tudo que a gente faz cabe em entregável. Há quase uma década, parceiros — de gigantes de mídia a fundadores — nos chamam pra tirar produto e formato do papel: conceito, design de serviço, MVP, lançamento. Essa via não tem vitrine. Tem histórico."
+   "es": "No todo lo que hacemos cabe en un entregable. Hace casi una década, socios — de gigantes de medios a fundadores — nos llaman para sacar productos y formatos del papel: concepto, diseño de servicio, MVP, lanzamiento. Esta vía no tiene vitrina. Tiene historial.",
+   "zh": "我们做的事，并非都能装进交付物。近十年来，从媒体巨头到创业者的合作伙伴都会找我们，把产品和内容形式从纸面变为现实：概念、服务设计、MVP、上线。这条路没有橱窗，只有履历。",
+   "no": "Ikke alt vi gjør får plass i en leveranse. I nesten et tiår har partnere — fra mediegiganter til gründere — hentet oss inn for å ta produkter og formater fra papiret: konsept, tjenestedesign, MVP, lansering. Denne veien har ingen utstillingsvindu. Den har historikk."
   },
   "nav_lab": {
    "pt": "Lab",
@@ -1113,16 +1114,16 @@ footer .base{font-size:13px}
    "title": {
     "pt": "Operação Criativa Contínua",
     "en": "Continuous Creative Operations",
-    "es": "Operação Criativa Contínua",
-    "zh": "Operação Criativa Contínua",
-    "no": "Operação Criativa Contínua"
+    "es": "Operación Creativa Continua",
+    "zh": "持续创意运营",
+    "no": "Kontinuerlig kreativ drift"
    },
    "desc": {
     "pt": "Um time plugado na sua rotina, com gestão, curadoria e entrega constante — sem aumentar sua folha de pagamento.",
     "en": "A team plugged into your routine, with dedicated management, curation and steady delivery — without growing your payroll.",
-    "es": "Um time plugado na sua rotina, com gestão, curadoria e entrega constante — sem aumentar sua folha de pagamento.",
-    "zh": "Um time plugado na sua rotina, com gestão, curadoria e entrega constante — sem aumentar sua folha de pagamento.",
-    "no": "Um time plugado na sua rotina, com gestão, curadoria e entrega constante — sem aumentar sua folha de pagamento."
+    "es": "Un equipo conectado a tu rutina, con gestión, curaduría y entrega constante — sin aumentar tu nómina.",
+    "zh": "融入你日常运营的团队，配专属管理、内容把关与稳定交付 —— 无需扩编。",
+    "no": "Et team koblet til rutinen din, med ledelse, kuratering og jevn levering — uten å øke lønnslisten."
    }
   },
   {
@@ -1130,79 +1131,79 @@ footer .base{font-size:13px}
     "pt": "Design & Motion",
     "en": "Design & Motion",
     "es": "Design & Motion",
-    "zh": "Design & Motion",
-    "no": "Design & Motion"
+    "zh": "设计与动态",
+    "no": "Design & motion"
    },
    "desc": {
     "pt": "Identidade viva e animação com acabamento de agência grande, do conceito até a entrega técnica final.",
     "en": "Living identity and animation with big-agency finish, from concept through final technical delivery.",
-    "es": "Identidade viva e animação com acabamento de agência grande, do conceito até a entrega técnica final.",
-    "zh": "Identidade viva e animação com acabamento de agência grande, do conceito até a entrega técnica final.",
-    "no": "Identidade viva e animação com acabamento de agência grande, do conceito até a entrega técnica final."
+    "es": "Identidad viva y animación con acabado de agencia grande, del concepto a la entrega técnica final.",
+    "zh": "具有大型代理机构完成度的鲜活识别与动画，从概念到最终技术交付。",
+    "no": "Levende identitet og animasjon med stort byrås finish, fra konsept til endelig teknisk leveranse."
    }
   },
   {
    "title": {
     "pt": "3D & Ilustração",
     "en": "3D & Illustration",
-    "es": "3D & Ilustração",
-    "zh": "3D & Ilustração",
-    "no": "3D & Ilustração"
+    "es": "3D e Ilustración",
+    "zh": "3D 与插画",
+    "no": "3D & illustrasjon"
    },
    "desc": {
     "pt": "Peças em 2D e 3D para campanha, produto e plataforma, no padrão que marca grande exige.",
     "en": "2D and 3D pieces for campaigns, products and platforms, at the standard a major brand expects.",
-    "es": "Peças em 2D e 3D para campanha, produto e plataforma, no padrão que marca grande exige.",
-    "zh": "Peças em 2D e 3D para campanha, produto e plataforma, no padrão que marca grande exige.",
-    "no": "Peças em 2D e 3D para campanha, produto e plataforma, no padrão que marca grande exige."
+    "es": "Piezas en 2D y 3D para campaña, producto y plataforma, con el estándar que exige una marca grande.",
+    "zh": "面向campaign、产品与平台的 2D/3D 制作，达到大品牌要求的标准。",
+    "no": "2D- og 3D-elementer for kampanje, produkt og plattform, på nivået en stor merkevare krever."
    }
   },
   {
    "title": {
     "pt": "Branded Content & Entretenimento",
     "en": "Branded Content & Entertainment",
-    "es": "Branded Content & Entretenimento",
-    "zh": "Branded Content & Entretenimento",
-    "no": "Branded Content & Entretenimento"
+    "es": "Branded Content y Entretenimiento",
+    "zh": "品牌内容与娱乐",
+    "no": "Branded content & underholdning"
    },
    "desc": {
     "pt": "Formatos com propósito de marca, do roteiro à produção. Conteúdo que fica no ar, não só campanha que passa.",
     "en": "Brand-purpose formats, from script to production. Content that stays on air, not just a campaign that passes.",
-    "es": "Formatos com propósito de marca, do roteiro à produção. Conteúdo que fica no ar, não só campanha que passa.",
-    "zh": "Formatos com propósito de marca, do roteiro à produção. Conteúdo que fica no ar, não só campanha que passa.",
-    "no": "Formatos com propósito de marca, do roteiro à produção. Conteúdo que fica no ar, não só campanha que passa."
+    "es": "Formatos con propósito de marca, del guion a la producción. Contenido que permanece, no solo una campaña que pasa.",
+    "zh": "有品牌目的的内容形式，从剧本到制作完成——让内容留下来，而不只是路过的campaign。",
+    "no": "Formater med merkevareformål, fra manus til produksjon. Innhold som blir værende, ikke bare en kampanje som passerer."
    }
   },
   {
    "title": {
     "pt": "Broadcast & Grandes Eventos",
     "en": "Broadcast & Live Events",
-    "es": "Broadcast & Grandes Eventos",
-    "zh": "Broadcast & Grandes Eventos",
-    "no": "Broadcast & Grandes Eventos"
+    "es": "Broadcast y Grandes Eventos",
+    "zh": "广电与大型活动",
+    "no": "Broadcast & store eventer"
    },
    "desc": {
     "pt": "Identidade e conteúdo para TV, streaming, palco e ativação, no ritmo de quem não pode atrasar.",
     "en": "Identity and content for TV, streaming, stage and activations, at the pace of someone who can't be late.",
-    "es": "Identidade e conteúdo para TV, streaming, palco e ativação, no ritmo de quem não pode atrasar.",
-    "zh": "Identidade e conteúdo para TV, streaming, palco e ativação, no ritmo de quem não pode atrasar.",
-    "no": "Identidade e conteúdo para TV, streaming, palco e ativação, no ritmo de quem não pode atrasar."
+    "es": "Identidad y contenido para TV, streaming, escenario y activaciones, al ritmo de quien no puede atrasarse.",
+    "zh": "面向电视、流媒体、舞台与线下活动的识别与内容，紧跟不容延误的节奏。",
+    "no": "Identitet og innhold for TV, streaming, scene og aktiveringer, i tempoet til noen som ikke kan komme for sent."
    }
   },
   {
    "title": {
     "pt": "IA Aplicada à Marca",
     "en": "Applied AI for Brands",
-    "es": "IA Aplicada à Marca",
-    "zh": "IA Aplicada à Marca",
-    "no": "IA Aplicada à Marca"
+    "es": "IA Aplicada a la Marca",
+    "zh": "品牌 AI 应用",
+    "no": "Anvendt KI for merkevarer"
    },
    "desc": {
     "pt": "Testamos e aplicamos IA generativa onde faz sentido pra sua operação, sempre com segurança de marca.",
     "en": "We test and apply generative AI where it makes sense for your operation, always with brand safety in mind.",
-    "es": "Testamos e aplicamos IA generativa onde faz sentido pra sua operação, sempre com segurança de marca.",
-    "zh": "Testamos e aplicamos IA generativa onde faz sentido pra sua operação, sempre com segurança de marca.",
-    "no": "Testamos e aplicamos IA generativa onde faz sentido pra sua operação, sempre com segurança de marca."
+    "es": "Probamos y aplicamos IA generativa donde tiene sentido para tu operación, siempre con seguridad de marca.",
+    "zh": "在符合运营需求之处测试并落地生成式 AI，始终兼顾品牌安全。",
+    "no": "Vi tester og bruker generativ KI der det gir mening for driften din, alltid med merkevaresikkerhet."
    }
   }
  ],
@@ -1210,7 +1211,7 @@ footer .base{font-size:13px}
   "pt": "Operação criativa para todas as telas — *desde 2017*",
   "en": "Creative operations for every screen — *since 2017*",
   "es": "Operación creativa para todas las pantallas — *desde 2017*",
-  "zh": "面向每一块屏幕的创意运营 — *始于 2017*",
+  "zh": "覆盖所有屏幕的创意运营 — *自 2017 年起*",
   "no": "Kreativ drift for alle skjermer — *siden 2017*"
  },
  "stats": [
@@ -1275,23 +1276,23 @@ footer .base{font-size:13px}
    "title": {
     "pt": "O Café Forte do Brasil",
     "en": "O Café Forte do Brasil",
-    "es": "O Café Forte do Brasil",
-    "zh": "O Café Forte do Brasil",
-    "no": "O Café Forte do Brasil"
+    "es": "El Café Fuerte de Brasil",
+    "zh": "巴西浓咖啡",
+    "no": "Brasils sterke kaffe"
    },
    "tags": {
     "pt": "Criação · Direção · Produção · Finalização",
     "en": "Criação · Direção · Produção · Finalização",
-    "es": "Criação · Direção · Produção · Finalização",
-    "zh": "Criação · Direção · Produção · Finalização",
-    "no": "Criação · Direção · Produção · Finalização"
+    "es": "Creación · Dirección · Producción · Finalización",
+    "zh": "创意 · 导演 · 制作 · 后期",
+    "no": "Kreasjon · Regi · Produksjon · Ferdigstillelse"
    },
    "body": {
     "pt": "Foi na semana da Copa, com tudo fechando cedo e locação disputada — um dos projetos mais corridos que já fizemos. Cocriamos com o time da ESPN Brasil e tocamos a operação inteira, do conceito à entrega, pra reforçar o sabor do café Pilão sem perder o bom humor da campanha.",
     "en": "It was World Cup week, everything closing early, locations hard to book — one of the tightest projects we've run. We co-created with ESPN Brazil's team and ran the whole operation, from concept to delivery, to bring out the flavor of Pilão coffee without losing the campaign's sense of humor.",
-    "es": "Foi na semana da Copa, com tudo fechando cedo e locação disputada — um dos projetos mais corridos que já fizemos. Cocriamos com o time da ESPN Brasil e tocamos a operação inteira, do conceito à entrega, pra reforçar o sabor do café Pilão sem perder o bom humor da campanha.",
-    "zh": "Foi na semana da Copa, com tudo fechando cedo e locação disputada — um dos projetos mais corridos que já fizemos. Cocriamos com o time da ESPN Brasil e tocamos a operação inteira, do conceito à entrega, pra reforçar o sabor do café Pilão sem perder o bom humor da campanha.",
-    "no": "Foi na semana da Copa, com tudo fechando cedo e locação disputada — um dos projetos mais corridos que já fizemos. Cocriamos com o time da ESPN Brasil e tocamos a operação inteira, do conceito à entrega, pra reforçar o sabor do café Pilão sem perder o bom humor da campanha."
+    "es": "Fue en la semana del Mundial, con todo cerrando temprano y locaciones disputadas — uno de los proyectos más contrarreloj que hemos hecho. Cocreamos con el equipo de ESPN Brasil y llevamos toda la operación, del concepto a la entrega, para reforzar el sabor del café Pilão sin perder el buen humor de la campaña.",
+    "zh": "那是世界杯周，处处提前打烊、场地一位难求 —— 是我们做过节奏最紧的项目之一。我们与 ESPN 巴西团队联合创作，从概念到交付统筹整个流程，突出 Pilão 咖啡的风味，同时保住整个项目的幽默感。",
+    "no": "Det var i VM-uken, alt stengte tidlig og locations var vanskelige å booke — et av de mest hektiske prosjektene vi har gjort. Vi samskapte med ESPN Brasil-teamet og drev hele operasjonen, fra konsept til leveranse, for å løfte smaken av Pilão-kaffen uten å miste kampanjens gode humør."
    },
    "blocks": [
     {
@@ -1323,23 +1324,23 @@ footer .base{font-size:13px}
    "title": {
     "pt": "Para o seu bebê se desenvolver melhor",
     "en": "Para o seu bebê se desenvolver melhor",
-    "es": "Para o seu bebê se desenvolver melhor",
-    "zh": "Para o seu bebê se desenvolver melhor",
-    "no": "Para o seu bebê se desenvolver melhor"
+    "es": "Para que tu bebé se desarrolle mejor",
+    "zh": "让宝宝发育得更好",
+    "no": "For at babyen din skal utvikle seg bedre"
    },
    "tags": {
     "pt": "Design · DA · Ilustração · Animação",
     "en": "Design · DA · Ilustração · Animação",
-    "es": "Design · DA · Ilustração · Animação",
-    "zh": "Design · DA · Ilustração · Animação",
-    "no": "Design · DA · Ilustração · Animação"
+    "es": "Design · DA · Ilustración · Animación",
+    "zh": "设计 · 艺术指导 · 插画 · 动画",
+    "no": "Design · DA · Illustrasjon · Animasjon"
    },
    "body": {
     "pt": "Cocriado com a Disney Company Brasil: assumimos o design e a operação criativa in-company do canal Disney Jr. pra dar corpo ao branded content do lançamento da linha Huggies Supreme Care.",
     "en": "Co-created with The Walt Disney Company Brazil: we ran design and in-company creative operations for the Disney Jr. channel to bring the branded content for the Huggies Supreme Care launch to life.",
-    "es": "Cocriado com a Disney Company Brasil: assumimos o design e a operação criativa in-company do canal Disney Jr. pra dar corpo ao branded content do lançamento da linha Huggies Supreme Care.",
-    "zh": "Cocriado com a Disney Company Brasil: assumimos o design e a operação criativa in-company do canal Disney Jr. pra dar corpo ao branded content do lançamento da linha Huggies Supreme Care.",
-    "no": "Cocriado com a Disney Company Brasil: assumimos o design e a operação criativa in-company do canal Disney Jr. pra dar corpo ao branded content do lançamento da linha Huggies Supreme Care."
+    "es": "Cocreado con The Walt Disney Company Brasil: asumimos el diseño y la operación creativa in-company del canal Disney Jr. para dar vida al branded content del lanzamiento de la línea Huggies Supreme Care.",
+    "zh": "与迪士尼巴西联合创作：为 Disney Jr. 频道负责设计与内企创意运营，打造 Huggies Supreme Care 系列上线的品牌内容。",
+    "no": "Samskapt med The Walt Disney Company Brasil: vi sto for design og in-company kreativ drift for Disney Jr.-kanalen for å realisere branded content-lanseringen av Huggies Supreme Care."
    },
    "blocks": [
     {
@@ -1388,16 +1389,16 @@ footer .base{font-size:13px}
    "tags": {
     "pt": "Criação · Gestão Criativa",
     "en": "Criação · Gestão Criativa",
-    "es": "Criação · Gestão Criativa",
-    "zh": "Criação · Gestão Criativa",
-    "no": "Criação · Gestão Criativa"
+    "es": "Creación · Gestión Creativa",
+    "zh": "创意 · 创意管理",
+    "no": "Kreasjon · Kreativ ledelse"
    },
    "body": {
     "pt": "Cuidamos do branding e do tom de voz da TV TEM, afiliada Globo com alcance em 318 municípios e cerca de 8,2 milhões de habitantes no interior paulista — identidade visual funcional, entregue de ponta a ponta.",
     "en": "We handled branding and tone of voice for TV TEM, a Globo affiliate reaching 318 municipalities and roughly 8.2 million people across the São Paulo countryside — a functional visual identity, delivered end to end.",
-    "es": "Cuidamos do branding e do tom de voz da TV TEM, afiliada Globo com alcance em 318 municípios e cerca de 8,2 milhões de habitantes no interior paulista — identidade visual funcional, entregue de ponta a ponta.",
-    "zh": "Cuidamos do branding e do tom de voz da TV TEM, afiliada Globo com alcance em 318 municípios e cerca de 8,2 milhões de habitantes no interior paulista — identidade visual funcional, entregue de ponta a ponta.",
-    "no": "Cuidamos do branding e do tom de voz da TV TEM, afiliada Globo com alcance em 318 municípios e cerca de 8,2 milhões de habitantes no interior paulista — identidade visual funcional, entregue de ponta a ponta."
+    "es": "Cuidamos el branding y el tono de voz de TV TEM, afiliada de Globo con alcance en 318 municipios y cerca de 8,2 millones de habitantes del interior de São Paulo — identidad visual funcional, entregada de punta a punta.",
+    "zh": "我们负责 TV TEM 的品牌与语调 —— 这家 Globo 联营电视台覆盖圣保罗州内陆 318 个市镇、约 820 万居民 —— 一套实用的视觉识别，端到端交付。",
+    "no": "Vi tok hånd om branding og tone of voice for TV TEM, en Globo-tilknyttet kanal som når 318 kommuner og rundt 8,2 millioner innbyggere i innlandet av São Paulo — en funksjonell visuell identitet, levert ende til ende."
    },
    "blocks": []
   },
@@ -1415,23 +1416,23 @@ footer .base{font-size:13px}
    "title": {
     "pt": "Um show de noiva — Season #2",
     "en": "Um show de noiva — Season #2",
-    "es": "Um show de noiva — Season #2",
-    "zh": "Um show de noiva — Season #2",
-    "no": "Um show de noiva — Season #2"
+    "es": "Un show de novia — Temporada #2",
+    "zh": "新娘秀 — 第二季",
+    "no": "Et brudeshow — sesong 2"
    },
    "tags": {
     "pt": "DA · Design · Gestão Criativa · Motion",
     "en": "DA · Design · Gestão Criativa · Motion",
-    "es": "DA · Design · Gestão Criativa · Motion",
-    "zh": "DA · Design · Gestão Criativa · Motion",
-    "no": "DA · Design · Gestão Criativa · Motion"
+    "es": "DA · Design · Gestión Creativa · Motion",
+    "zh": "艺术指导 · 设计 · 创意管理 · 动态",
+    "no": "DA · Design · Kreativ ledelse · Motion"
    },
    "body": {
     "pt": "Pegamos o registro clássico de casamento e transformamos em algo com cara de editorial de luxo — fotografia, grafismo e tipografia trabalhando juntos. Projeto feito para o canal E! Entertainment.",
     "en": "We took the classic wedding footage format and turned it into something with the feel of a luxury editorial — photography, graphics and typography working together. Made for the E! Entertainment channel.",
-    "es": "Pegamos o registro clássico de casamento e transformamos em algo com cara de editorial de luxo — fotografia, grafismo e tipografia trabalhando juntos. Projeto feito para o canal E! Entertainment.",
-    "zh": "Pegamos o registro clássico de casamento e transformamos em algo com cara de editorial de luxo — fotografia, grafismo e tipografia trabalhando juntos. Projeto feito para o canal E! Entertainment.",
-    "no": "Pegamos o registro clássico de casamento e transformamos em algo com cara de editorial de luxo — fotografia, grafismo e tipografia trabalhando juntos. Projeto feito para o canal E! Entertainment."
+    "es": "Tomamos el registro clásico de boda y lo transformamos en algo con aire de editorial de lujo — fotografía, grafismo y tipografía trabajando juntos. Hecho para el canal E! Entertainment.",
+    "zh": "我们把传统婚礼纪实拍摄，改造成带有奢华杂志感的作品 —— 摄影、图形与字体设计三者合一。为 E! Entertainment 频道打造。",
+    "no": "Vi tok det klassiske bryllupsopptaket og gjorde det om til noe med følelsen av en luksuriøs redaksjonell utgivelse — fotografi, grafikk og typografi som jobber sammen. Laget for E! Entertainment-kanalen."
    },
    "blocks": []
   },
@@ -1449,23 +1450,23 @@ footer .base{font-size:13px}
    "title": {
     "pt": "Um sonho ainda maior",
     "en": "Um sonho ainda maior",
-    "es": "Um sonho ainda maior",
-    "zh": "Um sonho ainda maior",
-    "no": "Um sonho ainda maior"
+    "es": "Un sueño aún más grande",
+    "zh": "更大的梦想",
+    "no": "En enda større drøm"
    },
    "tags": {
     "pt": "Criação · Design · Gestão Operacional",
     "en": "Criação · Design · Gestão Operacional",
-    "es": "Criação · Design · Gestão Operacional",
-    "zh": "Criação · Design · Gestão Operacional",
-    "no": "Criação · Design · Gestão Operacional"
+    "es": "Creación · Design · Gestión Operativa",
+    "zh": "创意 · 设计 · 运营管理",
+    "no": "Kreasjon · Design · Operativ ledelse"
    },
    "body": {
     "pt": "Cocriamos com o time de experiência da Stone.co pra registrar um dos momentos mais importantes da união entre Stone e Linx — do key visual ao motion, com a operação inteira sob nossa gestão.",
     "en": "We co-created with Stone.co's experience team to capture one of the most important moments in the Stone and Linx merger — from key visual to motion, with the full operation under our management.",
-    "es": "Cocriamos com o time de experiência da Stone.co pra registrar um dos momentos mais importantes da união entre Stone e Linx — do key visual ao motion, com a operação inteira sob nossa gestão.",
-    "zh": "Cocriamos com o time de experiência da Stone.co pra registrar um dos momentos mais importantes da união entre Stone e Linx — do key visual ao motion, com a operação inteira sob nossa gestão.",
-    "no": "Cocriamos com o time de experiência da Stone.co pra registrar um dos momentos mais importantes da união entre Stone e Linx — do key visual ao motion, com a operação inteira sob nossa gestão."
+    "es": "Cocreamos con el equipo de experiencia de Stone.co para registrar uno de los momentos más importantes de la unión entre Stone y Linx — del key visual al motion, con toda la operación bajo nuestra gestión.",
+    "zh": "与 Stone.co 体验团队联合创作，记录 Stone 与 Linx 合并历程中最重要的时刻之一 —— 从主视觉到动态制作，整个流程由我们统筹管理。",
+    "no": "Vi samskapte med Stone.co sitt opplevelsesteam for å fange et av de viktigste øyeblikkene i sammenslåingen mellom Stone og Linx — fra key visual til motion, med hele operasjonen under vår ledelse."
    },
    "blocks": [
     {
@@ -1502,16 +1503,16 @@ footer .base{font-size:13px}
    "tags": {
     "pt": "Criação · DA · Gestão",
     "en": "Criação · DA · Gestão",
-    "es": "Criação · DA · Gestão",
-    "zh": "Criação · DA · Gestão",
-    "no": "Criação · DA · Gestão"
+    "es": "Creación · DA · Gestión",
+    "zh": "创意 · 艺术指导 · 管理",
+    "no": "Kreasjon · DA · Ledelse"
    },
    "body": {
     "pt": "A convite da Barry Company e da GNT, assumimos a criação e a identidade visual do programa a partir da 2ª temporada — um formato que resgata memórias afetivas através da restauração de móveis.",
     "en": "Invited by Barry Company and GNT, we took over creation and visual identity for the show starting with season 2 — a format that brings back memories through furniture restoration.",
-    "es": "A convite da Barry Company e da GNT, assumimos a criação e a identidade visual do programa a partir da 2ª temporada — um formato que resgata memórias afetivas através da restauração de móveis.",
-    "zh": "A convite da Barry Company e da GNT, assumimos a criação e a identidade visual do programa a partir da 2ª temporada — um formato que resgata memórias afetivas através da restauração de móveis.",
-    "no": "A convite da Barry Company e da GNT, assumimos a criação e a identidade visual do programa a partir da 2ª temporada — um formato que resgata memórias afetivas através da restauração de móveis."
+    "es": "Por invitación de Barry Company y GNT, asumimos la creación y la identidad visual del programa a partir de la 2ª temporada — un formato que recupera recuerdos afectivos a través de la restauración de muebles.",
+    "zh": "受 Barry Company 与 GNT 之邀，自第二季起负责该节目的创意与视觉识别 —— 一档通过家具修复唤起情感记忆的节目。",
+    "no": "På invitasjon fra Barry Company og GNT tok vi over kreasjon og visuell identitet for programmet fra og med sesong 2 — et format som gjenskaper minner gjennom møbelrestaurering."
    },
    "blocks": [
     {
@@ -1548,16 +1549,16 @@ footer .base{font-size:13px}
    "tags": {
     "pt": "Design · DA · Motion · Gestão Operacional",
     "en": "Design · DA · Motion · Gestão Operacional",
-    "es": "Design · DA · Motion · Gestão Operacional",
-    "zh": "Design · DA · Motion · Gestão Operacional",
-    "no": "Design · DA · Motion · Gestão Operacional"
+    "es": "Design · DA · Motion · Gestión Operativa",
+    "zh": "设计 · 艺术指导 · 动态 · 运营管理",
+    "no": "Design · DA · Motion · Operativ ledelse"
    },
    "body": {
     "pt": "Fomos convidados pela Disney ESPN pra cocriar com a Budweiser um projeto sobre nomes do esporte americano que construíram sua história à base de luta e persistência. Um dos que mais nos orgulha.",
     "en": "Disney ESPN invited us to co-create with Budweiser a project about American sports figures who built their legacy through struggle and persistence. One we're especially proud of.",
-    "es": "Fomos convidados pela Disney ESPN pra cocriar com a Budweiser um projeto sobre nomes do esporte americano que construíram sua história à base de luta e persistência. Um dos que mais nos orgulha.",
-    "zh": "Fomos convidados pela Disney ESPN pra cocriar com a Budweiser um projeto sobre nomes do esporte americano que construíram sua história à base de luta e persistência. Um dos que mais nos orgulha.",
-    "no": "Fomos convidados pela Disney ESPN pra cocriar com a Budweiser um projeto sobre nomes do esporte americano que construíram sua história à base de luta e persistência. Um dos que mais nos orgulha."
+    "es": "Disney ESPN nos invitó a cocrear con Budweiser un proyecto sobre figuras del deporte estadounidense que construyeron su legado a través de la lucha y la persistencia. Uno de los que más nos enorgullece.",
+    "zh": "Disney ESPN 邀请我们与百威联合创作，讲述那些靠拼搏与坚持成就传奇的美国体育人物。这是我们最引以为豪的项目之一。",
+    "no": "Disney ESPN inviterte oss til å samskape med Budweiser et prosjekt om amerikanske idrettsfigurer som bygget sin arv gjennom kamp og utholdenhet. Et vi er spesielt stolte av."
    },
    "blocks": [
     {
@@ -1587,23 +1588,23 @@ footer .base{font-size:13px}
    "title": {
     "pt": "A gente explica e você vira fã",
     "en": "A gente explica e você vira fã",
-    "es": "A gente explica e você vira fã",
-    "zh": "A gente explica e você vira fã",
-    "no": "A gente explica e você vira fã"
+    "es": "Te lo explicamos y te haces fan",
+    "zh": "我们讲解，你成为粉丝",
+    "no": "Vi forklarer, og du blir fan"
    },
    "tags": {
     "pt": "Cocriação · DA · Ilustração · Produção Digital",
     "en": "Cocriação · DA · Ilustração · Produção Digital",
-    "es": "Cocriação · DA · Ilustração · Produção Digital",
-    "zh": "Cocriação · DA · Ilustração · Produção Digital",
-    "no": "Cocriação · DA · Ilustração · Produção Digital"
+    "es": "Cocreación · DA · Ilustración · Producción Digital",
+    "zh": "联合创作 · 艺术指导 · 插画 · 数字制作",
+    "no": "Samskaping · DA · Illustrasjon · Digital produksjon"
    },
    "body": {
     "pt": "Desdobramento da campanha 'Fome de NBA' em branded content, veiculado durante a cobertura ESPN da NBA 2021 — cocriado com a Disney Company Brasil.",
     "en": "A follow-up to the 'Fome de NBA' campaign in branded content form, aired during ESPN's 2021 NBA coverage — co-created with The Walt Disney Company Brazil.",
-    "es": "Desdobramento da campanha 'Fome de NBA' em branded content, veiculado durante a cobertura ESPN da NBA 2021 — cocriado com a Disney Company Brasil.",
-    "zh": "Desdobramento da campanha 'Fome de NBA' em branded content, veiculado durante a cobertura ESPN da NBA 2021 — cocriado com a Disney Company Brasil.",
-    "no": "Desdobramento da campanha 'Fome de NBA' em branded content, veiculado durante a cobertura ESPN da NBA 2021 — cocriado com a Disney Company Brasil."
+    "es": "Continuación de la campaña 'Fome de NBA' en formato branded content, emitida durante la cobertura de la NBA 2021 en ESPN — cocreado con The Walt Disney Company Brasil.",
+    "zh": "\"Fome de NBA\"项目的延续，以品牌内容形式在 ESPN 2021 NBA 转播期间播出 —— 与迪士尼巴西联合制作。",
+    "no": "En oppfølger til 'Fome de NBA'-kampanjen i branded content-form, sendt under ESPNs NBA-dekning i 2021 — samskapt med The Walt Disney Company Brasil."
    },
    "blocks": [
     {
@@ -1633,23 +1634,23 @@ footer .base{font-size:13px}
    "title": {
     "pt": "Weasyplan — naming ao naming à papelaria",
     "en": "Weasyplan — naming ao naming à papelaria",
-    "es": "Weasyplan — naming ao naming à papelaria",
-    "zh": "Weasyplan — naming ao naming à papelaria",
-    "no": "Weasyplan — naming ao naming à papelaria"
+    "es": "Weasyplan — del naming a la papelería",
+    "zh": "Weasyplan — 从命名到全套物料",
+    "no": "Weasyplan — fra naming til trykksaker"
    },
    "tags": {
     "pt": "Naming · Criação & Conceito · DA · Design",
     "en": "Naming · Criação & Conceito · DA · Design",
-    "es": "Naming · Criação & Conceito · DA · Design",
-    "zh": "Naming · Criação & Conceito · DA · Design",
-    "no": "Naming · Criação & Conceito · DA · Design"
+    "es": "Naming · Creación y Concepto · DA · Design",
+    "zh": "命名 · 创意与概念 · 艺术指导 · 设计",
+    "no": "Naming · Kreasjon & konsept · DA · Design"
    },
    "body": {
     "pt": "\"A sua empresa fora do Brasil.\" Do naming à papelaria: construímos a identidade da Weasyplan, plataforma que ajuda empresas brasileiras a se internacionalizarem — o símbolo da bandeira carrega essa travessia.",
     "en": "\"Your company outside Brazil.\" From naming to stationery: we built the identity for Weasyplan, a platform that helps Brazilian companies go international — the flag symbol carries that journey.",
-    "es": "\"A sua empresa fora do Brasil.\" Do naming à papelaria: construímos a identidade da Weasyplan, plataforma que ajuda empresas brasileiras a se internacionalizarem — o símbolo da bandeira carrega essa travessia.",
-    "zh": "\"A sua empresa fora do Brasil.\" Do naming à papelaria: construímos a identidade da Weasyplan, plataforma que ajuda empresas brasileiras a se internacionalizarem — o símbolo da bandeira carrega essa travessia.",
-    "no": "\"A sua empresa fora do Brasil.\" Do naming à papelaria: construímos a identidade da Weasyplan, plataforma que ajuda empresas brasileiras a se internacionalizarem — o símbolo da bandeira carrega essa travessia."
+    "es": "\"Tu empresa fuera de Brasil.\" Del naming a la papelería: construimos la identidad de Weasyplan, una plataforma que ayuda a empresas brasileñas a internacionalizarse — el símbolo de la bandera representa ese viaje.",
+    "zh": "\"让你的企业走出巴西。\"从命名到全套物料：我们为 Weasyplan 打造品牌识别 —— 这是一个帮助巴西企业出海的平台，旗帜符号承载着这段征程。",
+    "no": "\"Bedriften din utenfor Brasil.\" Fra naming til trykksaker: vi bygget identiteten til Weasyplan, en plattform som hjelper brasilianske selskaper med internasjonalisering — flaggsymbolet bærer den reisen."
    },
    "blocks": []
   },
@@ -1677,9 +1678,9 @@ footer .base{font-size:13px}
    "body": {
     "pt": "Direção da criação visual e branding de uma das emissoras mais relevantes do país: identidade, campanhas, eventos e operação diária, alinhando estratégia do CEO a todas as áreas.\nPor confidencialidade, este case é apresentado sem imagens — os detalhes podem ser compartilhados em conversa.",
     "en": "Leading visual creation and branding for one of the country's most relevant broadcasters: identity, campaigns, events and daily operations, aligning CEO strategy across every area.\nFor confidentiality, this case is presented without imagery — details can be shared in conversation.",
-    "es": "Dirección de creación visual y branding de una de las emisoras más relevantes del país.\nPor confidencialidad, este caso se presenta sin imágenes — los detalles pueden compartirse en conversación.",
-    "zh": "为国内最具影响力的电视台之一主导视觉创作与品牌：识别、campaign、活动与日常运营，将 CEO 战略贯通各部门。\n出于保密要求，本案例不展示画面 —— 细节可在会谈中分享。",
-    "no": "Ledet visuell skapelse og branding for en av landets mest relevante kringkastere.\nAv konfidensialitetshensyn presenteres denne casen uten bilder — detaljer kan deles i samtale."
+    "es": "Dirección de la creación visual y branding de una de las emisoras más relevantes del país: identidad, campañas, eventos y operación diaria, alineando la estrategia del CEO con todas las áreas.\nPor confidencialidad, este caso se presenta sin imágenes — los detalles pueden compartirse en conversación.",
+    "zh": "主导国内一家最具影响力电视台的视觉创作与品牌管理：识别、项目、活动与日常运营，将 CEO 战略贯通各部门。\n出于保密要求，本案例不展示画面 —— 细节可在会谈中分享。",
+    "no": "Ledet visuell skapelse og branding for en av landets mest relevante kringkastere: identitet, kampanjer, eventer og daglig drift, i tråd med CEO-ens strategi på tvers av alle avdelinger.\nAv konfidensialitetshensyn presenteres denne casen uten bilder — detaljer kan deles i samtale."
    },
    "blocks": []
   },
@@ -1694,7 +1695,7 @@ footer .base{font-size:13px}
     "pt": "Campanhas nacionais sob NDA",
     "en": "National campaigns under NDA",
     "es": "Campañas nacionales bajo NDA",
-    "zh": "保密协议下的全国性campaign",
+    "zh": "保密协议下的全国性项目",
     "no": "Nasjonale kampanjer under NDA"
    },
    "tags": {
@@ -1707,9 +1708,9 @@ footer .base{font-size:13px}
    "body": {
     "pt": "Bastidores que não podemos mostrar: projetos de altíssima visibilidade nacional em design e motion, entregues sob confidencialidade — dos estúdios de cinema às campanhas de grande escala.\nPor confidencialidade, este case é apresentado sem imagens — os detalhes podem ser compartilhados em conversa.",
     "en": "Backstage work we can't show: nationally high-visibility design and motion projects delivered under confidentiality — from film studios to large-scale campaigns.\nFor confidentiality, this case is presented without imagery — details can be shared in conversation.",
-    "es": "Bastidores que no podemos mostrar: proyectos de altísima visibilidad nacional entregados bajo confidencialidad.\nPor confidencialidad, este caso se presenta sin imágenes — los detalles pueden compartirse en conversación.",
-    "zh": "无法展示的幕后：全国高曝光度的设计与动态项目，在保密协议下交付 —— 从电影棚到大型campaign。\n出于保密要求，本案例不展示画面 —— 细节可在会谈中分享。",
-    "no": "Kulissearbeid vi ikke kan vise: nasjonalt høyprofilerte design- og motion-prosjekter levert under konfidensialitet.\nAv konfidensialitetshensyn presenteres denne casen uten bilder — detaljer kan deles i samtale."
+    "es": "Bastidores que no podemos mostrar: proyectos de altísima visibilidad nacional en design y motion, entregados bajo confidencialidad — de estudios de cine a campañas de gran escala.\nPor confidencialidad, este caso se presenta sin imágenes — los detalles pueden compartirse en conversación.",
+    "zh": "无法展示的幕后：全国高曝光度的设计与动态项目，在保密协议下交付 —— 从电影棚到大型项目。\n出于保密要求，本案例不展示画面 —— 细节可在会谈中分享。",
+    "no": "Kulissearbeid vi ikke kan vise: nasjonalt høyprofilerte design- og motion-prosjekter levert under konfidensialitet — fra filmstudioer til storskala kampanjer.\nAv konfidensialitetshensyn presenteres denne casen uten bilder — detaljer kan deles i samtale."
    },
    "blocks": []
   },
@@ -1736,9 +1737,9 @@ footer .base{font-size:13px}
    "body": {
     "pt": "Promo concept de design e motion para o iPhone 17 Pro: direção de arte, animação e finalização em ritmo de filme de lançamento, explorando materiais, luz e tipografia do produto.\nProjeto completo em https://www.behance.net/gallery/244661767/Iphone-17-Pro-Design-Motion",
     "en": "A design and motion promo concept for the iPhone 17 Pro: art direction, animation and finishing at launch-film pace, exploring the product's materials, light and typography.\nFull project at https://www.behance.net/gallery/244661767/Iphone-17-Pro-Design-Motion",
-    "es": "Promo concept de diseño y motion para el iPhone 17 Pro: dirección de arte, animación y acabado a ritmo de película de lanzamiento, explorando materiales, luz y tipografía del producto.\nProyecto completo en https://www.behance.net/gallery/244661767/Iphone-17-Pro-Design-Motion",
-    "zh": "为 iPhone 17 Pro 打造的设计与动态概念宣传片：以发布影片的节奏进行艺术指导、动画与后期，探索产品的材质、光影与文字排印。\n完整项目见 https://www.behance.net/gallery/244661767/Iphone-17-Pro-Design-Motion",
-    "no": "Et design- og motion-konsept for iPhone 17 Pro: art direction, animasjon og ferdigstilling i lanseringsfilm-tempo, som utforsker produktets materialer, lys og typografi.\nHele prosjektet på https://www.behance.net/gallery/244661767/Iphone-17-Pro-Design-Motion"
+    "es": "Concepto promo de design y motion para el iPhone 17 Pro: dirección de arte, animación y finalización al ritmo de un tráiler de lanzamiento, explorando materiales, luz y tipografía del producto.\nProyecto completo en https://www.behance.net/gallery/244661767/Iphone-17-Pro-Design-Motion",
+    "zh": "为 iPhone 17 Pro 打造的宣传概念：art direction、动画与后期制作，节奏如同发布影片，探索产品的材质、光线与字体。\n完整项目见 https://www.behance.net/gallery/244661767/Iphone-17-Pro-Design-Motion",
+    "no": "Promokonsept med design og motion for iPhone 17 Pro: art direction, animasjon og ferdigstillelse i tempoet til en lanseringsfilm, med utforsking av produktets materialer, lys og typografi.\nHele prosjektet på https://www.behance.net/gallery/244661767/Iphone-17-Pro-Design-Motion"
    },
    "blocks": [
     {
@@ -1747,15 +1748,15 @@ footer .base{font-size:13px}
       "pt": "O *processo*",
       "en": "The *process*",
       "es": "El *proceso*",
-      "zh": "*过程*",
+      "zh": "*流程*",
       "no": "*Prosessen*"
      },
      "body": {
       "pt": "Substitua este texto pelos destaques do processo: referências, styleframes, direção de câmera e som.",
       "en": "Replace this text with process highlights: references, styleframes, camera direction and sound.",
-      "es": "Reemplaza este texto por los destacados del proceso.",
-      "zh": "请将此文本替换为过程亮点。",
-      "no": "Erstatt denne teksten med høydepunkter fra prosessen."
+      "es": "Reemplaza este texto por los aspectos destacados del proceso: referencias, styleframes, dirección de cámara y sonido.",
+      "zh": "请替换为流程亮点：参考资料、风格帧、镜头与声音调度。",
+      "no": "Erstatt denne teksten med prosesshøydepunkter: referanser, styleframes, kamera- og lydregi."
      }
     },
     {
@@ -1764,9 +1765,9 @@ footer .base{font-size:13px}
      "caption": {
       "pt": "Filme principal — cole aqui a URL do vídeo (YouTube/Vimeo/MP4)",
       "en": "Main film — paste the video URL here",
-      "es": "Película principal — pega aquí la URL",
-      "zh": "主片 — 在此粘贴视频链接",
-      "no": "Hovedfilm — lim inn video-URL her"
+      "es": "Video principal — pega aquí la URL (YouTube/Vimeo/MP4)",
+      "zh": "主视频 — 在此粘贴视频链接（YouTube/Vimeo/MP4）",
+      "no": "Hovedvideo — lim inn video-URL her (YouTube/Vimeo/MP4)"
      }
     },
     {
@@ -1784,31 +1785,31 @@ footer .base{font-size:13px}
      "pt": "Ritmo",
      "en": "Pace",
      "es": "Ritmo",
-     "zh": "Ritmo",
-     "no": "Ritmo"
+     "zh": "节奏",
+     "no": "Rytme"
     },
     "line": {
      "pt": "Entrega no dia combinado. Sem novela.",
      "en": "We deliver on the day we agreed. No drama.",
-     "es": "Entrega no dia combinado. Sem novela.",
-     "zh": "Entrega no dia combinado. Sem novela.",
-     "no": "Entrega no dia combinado. Sem novela."
+     "es": "Entrega en el día acordado. Sin novela.",
+     "zh": "按约定日期交付。不拖泥带水。",
+     "no": "Levering på avtalt dag. Ingen drama."
     }
    },
    {
     "word": {
      "pt": "Bastidor",
      "en": "Backstage",
-     "es": "Bastidor",
-     "zh": "Bastidor",
-     "no": "Bastidor"
+     "es": "Backstage",
+     "zh": "幕后",
+     "no": "Bak kulissene"
     },
     "line": {
      "pt": "A verdade mora onde ninguém filma.",
      "en": "The truth lives where nobody's filming.",
-     "es": "A verdade mora onde ninguém filma.",
-     "zh": "A verdade mora onde ninguém filma.",
-     "no": "A verdade mora onde ninguém filma."
+     "es": "La verdad vive donde nadie filma.",
+     "zh": "真相住在没有镜头的地方。",
+     "no": "Sannheten bor der ingen filmer."
     }
    },
    {
@@ -1816,31 +1817,31 @@ footer .base{font-size:13px}
      "pt": "Craft",
      "en": "Craft",
      "es": "Craft",
-     "zh": "Craft",
-     "no": "Craft"
+     "zh": "匠心",
+     "no": "Håndverk"
     },
     "line": {
      "pt": "O detalhe que só quem já rodou agência, TV e evento enxerga.",
      "en": "The kind of detail only someone who's worked agency, TV and live events can see.",
-     "es": "O detalhe que só quem já rodou agência, TV e evento enxerga.",
-     "zh": "O detalhe que só quem já rodou agência, TV e evento enxerga.",
-     "no": "O detalhe que só quem já rodou agência, TV e evento enxerga."
+     "es": "El detalle que solo quien ya trabajó en agencia, TV y eventos nota.",
+     "zh": "只有做过代理机构、电视台和活动的人才能看出的细节。",
+     "no": "Detaljen bare noen som har jobbet med byrå, TV og eventer legger merke til."
     }
    },
    {
     "word": {
      "pt": "Confiança",
      "en": "Trust",
-     "es": "Confiança",
-     "zh": "Confiança",
-     "no": "Confiança"
+     "es": "Confianza",
+     "zh": "信任",
+     "no": "Tillit"
     },
     "line": {
      "pt": "Cliente de anos, não de projeto único.",
      "en": "Clients of years, not single projects.",
-     "es": "Cliente de anos, não de projeto único.",
-     "zh": "Cliente de anos, não de projeto único.",
-     "no": "Cliente de anos, não de projeto único."
+     "es": "Cliente de años, no de un solo proyecto.",
+     "zh": "多年客户，而非单次项目。",
+     "no": "Klienter i årevis, ikke enkeltprosjekter."
     }
    }
   ],
@@ -1974,92 +1975,92 @@ footer .base{font-size:13px}
    "aud": {
     "pt": "Times internos de marca",
     "en": "In-house brand teams",
-    "es": "Times internos de marca",
-    "zh": "Times internos de marca",
-    "no": "Times internos de marca"
+    "es": "Equipos internos de marca",
+    "zh": "品牌内部团队",
+    "no": "Interne merkevareteam"
    },
    "pain": {
     "pt": "A rotina, o time interno dá conta. O pico é outra conversa.",
     "en": "The routine, an in-house team handles. The spike is another story.",
-    "es": "A rotina, o time interno dá conta. O pico é outra conversa.",
-    "zh": "A rotina, o time interno dá conta. O pico é outra conversa.",
-    "no": "A rotina, o time interno dá conta. O pico é outra conversa."
+    "es": "La rutina, el equipo interno la resuelve. El pico es otra historia.",
+    "zh": "日常运营，内部团队能搞定，但需求高峰是另一回事。",
+    "no": "Rutinen takler det interne teamet. Toppene er en annen sak."
    },
    "text": {
     "pt": "Quando a demanda estoura, a gente vira reforço no seu time — sem processo de contratação no meio do caminho.",
     "en": "When demand spikes, we become reinforcement for your team — no hiring process in the middle.",
-    "es": "Quando a demanda estoura, a gente vira reforço no seu time — sem processo de contratação no meio do caminho.",
-    "zh": "Quando a demanda estoura, a gente vira reforço no seu time — sem processo de contratação no meio do caminho.",
-    "no": "Quando a demanda estoura, a gente vira reforço no seu time — sem processo de contratação no meio do caminho."
+    "es": "Cuando la demanda se dispara, nos convertimos en refuerzo de tu equipo — sin proceso de contratación de por medio.",
+    "zh": "需求爆发时，我们成为你团队的增援 —— 中间没有招聘流程。",
+    "no": "Når etterspørselen eksploderer, blir vi en forsterkning for teamet ditt — uten ansettelsesprosess i mellom."
    }
   },
   {
    "aud": {
     "pt": "Canais, streaming & conteúdo",
     "en": "Channels, streaming & content",
-    "es": "Canais, streaming & conteúdo",
-    "zh": "Canais, streaming & conteúdo",
-    "no": "Canais, streaming & conteúdo"
+    "es": "Canales, streaming y contenido",
+    "zh": "频道、流媒体与内容",
+    "no": "Kanaler, streaming & innhold"
    },
    "pain": {
     "pt": "O ar não espera ninguém.",
     "en": "Airtime waits for no one.",
-    "es": "O ar não espera ninguém.",
-    "zh": "O ar não espera ninguém.",
-    "no": "O ar não espera ninguém."
+    "es": "El aire no espera a nadie.",
+    "zh": "播出不等任何人。",
+    "no": "Sendetiden venter ikke på noen."
    },
    "text": {
     "pt": "Entendemos o ritmo de quem trabalha com grade: identidade, chamadas e pacotes gráficos entregues no horário certo, todos os dias.",
     "en": "We know the rhythm of working with a broadcast schedule: identity, promos and graphics packages delivered on time, every day.",
-    "es": "Entendemos o ritmo de quem trabalha com grade: identidade, chamadas e pacotes gráficos entregues no horário certo, todos os dias.",
-    "zh": "Entendemos o ritmo de quem trabalha com grade: identidade, chamadas e pacotes gráficos entregues no horário certo, todos os dias.",
-    "no": "Entendemos o ritmo de quem trabalha com grade: identidade, chamadas e pacotes gráficos entregues no horário certo, todos os dias."
+    "es": "Entendemos el ritmo de quien trabaja con parrilla: identidad, promos y paquetes gráficos entregados a tiempo, todos los días.",
+    "zh": "我们懂得依赖节目编排工作的节奏：识别、宣传片与图形包装，每天准时交付。",
+    "no": "Vi forstår rytmen til noen som jobber med sendeskjema: identitet, promoer og grafikkpakker levert i tide, hver dag."
    }
   },
   {
    "aud": {
     "pt": "Agências & houses",
     "en": "Agencies & houses",
-    "es": "Agências & houses",
-    "zh": "Agências & houses",
-    "no": "Agências & houses"
+    "es": "Agencias y houses",
+    "zh": "代理机构与制作公司",
+    "no": "Byråer & houses"
    },
    "pain": {
     "pt": "Pico de demanda não avisa.",
     "en": "Demand spikes don't warn you.",
-    "es": "Pico de demanda não avisa.",
-    "zh": "Pico de demanda não avisa.",
-    "no": "Pico de demanda não avisa."
+    "es": "El pico de demanda no avisa.",
+    "zh": "需求高峰从不打招呼。",
+    "no": "Etterspørselstopper varsler ikke."
    },
    "text": {
     "pt": "Quando o job aperta, entramos no seu fluxo, entendemos o cliente e ajudamos a dar conta — sem processo de contratação no meio do caminho.",
     "en": "When the job gets tight, we join your workflow, get up to speed on the client and help you deliver — no hiring process in the middle.",
-    "es": "Quando o job aperta, entramos no seu fluxo, entendemos o cliente e ajudamos a dar conta — sem processo de contratação no meio do caminho.",
-    "zh": "Quando o job aperta, entramos no seu fluxo, entendemos o cliente e ajudamos a dar conta — sem processo de contratação no meio do caminho.",
-    "no": "Quando o job aperta, entramos no seu fluxo, entendemos o cliente e ajudamos a dar conta — sem processo de contratação no meio do caminho."
+    "es": "Cuando el trabajo aprieta, entramos en tu flujo, entendemos al cliente y ayudamos a dar abasto — sin proceso de contratación de por medio.",
+    "zh": "当项目吃紧时，我们融入你的流程，理解客户需求，帮你搞定 —— 中间没有招聘流程。",
+    "no": "Når jobben strammer til, går vi inn i flyten din, forstår kunden og hjelper til med å levere — uten ansettelsesprosess i mellom."
    }
   },
   {
    "aud": {
     "pt": "Eventos & ativações",
     "en": "Events & activations",
-    "es": "Eventos & ativações",
-    "zh": "Eventos & ativações",
-    "no": "Eventos & ativações"
+    "es": "Eventos y activaciones",
+    "zh": "活动与品牌体验",
+    "no": "Eventer & aktiveringer"
    },
    "pain": {
     "pt": "O prazo não perdoa.",
     "en": "The deadline doesn't forgive.",
-    "es": "O prazo não perdoa.",
-    "zh": "O prazo não perdoa.",
-    "no": "O prazo não perdoa."
+    "es": "El plazo no perdona.",
+    "zh": "截止日期不容有失。",
+    "no": "Fristen tilgir ikke."
    },
    "text": {
     "pt": "Já vivemos a pressão de estreia grande. Craft com acabamento de agência, no prazo de quem trabalha com evento.",
     "en": "We've lived through the pressure of a big premiere. Agency-level craft, on the timeline events actually run on.",
-    "es": "Já vivemos a pressão de estreia grande. Craft com acabamento de agência, no prazo de quem trabalha com evento.",
-    "zh": "Já vivemos a pressão de estreia grande. Craft com acabamento de agência, no prazo de quem trabalha com evento.",
-    "no": "Já vivemos a pressão de estreia grande. Craft com acabamento de agência, no prazo de quem trabalha com evento."
+    "es": "Ya vivimos la presión de un gran estreno. Craft con acabado de agencia, en el plazo de quien trabaja con eventos.",
+    "zh": "我们经历过大型首播的压力，代理级工艺，遵循活动行业的交期。",
+    "no": "Vi har levd med presset fra en stor premiere. Håndverk med byrå-finish, på fristen til noen som jobber med eventer."
    }
   }
  ],
@@ -2074,9 +2075,9 @@ footer .base{font-size:13px}
     "what": {
      "pt": "Produto digital próprio, do zero ao piloto com a maior mídia do país",
      "en": "Our own digital product, from zero to a pilot with the country's biggest media group",
-     "es": "Produto digital próprio, do zero ao piloto com a maior mídia do país",
-     "zh": "Produto digital próprio, do zero ao piloto com a maior mídia do país",
-     "no": "Produto digital próprio, do zero ao piloto com a maior mídia do país"
+     "es": "Producto digital propio, de cero al piloto con el mayor medio del país",
+     "zh": "自有数字产品，从零到与全国最大媒体的试点合作",
+     "no": "Eget digitalt produkt, fra null til pilot med landets største mediehus"
     }
    },
    {
@@ -2085,9 +2086,9 @@ footer .base{font-size:13px}
     "what": {
      "pt": "Assessoria conceitual e design de formato para entretenimento",
      "en": "Concept advisory and format design for entertainment",
-     "es": "Assessoria conceitual e design de formato para entretenimento",
-     "zh": "Assessoria conceitual e design de formato para entretenimento",
-     "no": "Assessoria conceitual e design de formato para entretenimento"
+     "es": "Asesoría conceptual y diseño de formato para entretenimiento",
+     "zh": "娱乐内容的概念顾问与形式设计",
+     "no": "Konseptrådgivning og formatdesign for underholdning"
     }
    },
    {
@@ -2096,9 +2097,9 @@ footer .base{font-size:13px}
     "what": {
      "pt": "Desenvolvimento de piloto de digital reality vertical",
      "en": "Vertical digital reality pilot development",
-     "es": "Desenvolvimento de piloto de digital reality vertical",
-     "zh": "Desenvolvimento de piloto de digital reality vertical",
-     "no": "Desenvolvimento de piloto de digital reality vertical"
+     "es": "Desarrollo de piloto de digital reality vertical",
+     "zh": "竖屏数字真人秀试点开发",
+     "no": "Utvikling av pilot for vertikal digital reality"
     }
    },
    {
@@ -2107,9 +2108,9 @@ footer .base{font-size:13px}
     "what": {
      "pt": "Design de serviço, desenvolvimento de negócio e MVP no ar",
      "en": "Service design, business development and a live MVP",
-     "es": "Design de serviço, desenvolvimento de negócio e MVP no ar",
-     "zh": "Design de serviço, desenvolvimento de negócio e MVP no ar",
-     "no": "Design de serviço, desenvolvimento de negócio e MVP no ar"
+     "es": "Diseño de servicio, desarrollo de negocio y MVP en el aire",
+     "zh": "服务设计、业务开发与已上线的 MVP",
+     "no": "Tjenestedesign, forretningsutvikling og en levende MVP"
     }
    },
    {
@@ -2118,9 +2119,9 @@ footer .base{font-size:13px}
     "what": {
      "pt": "Estratégia e assessoria de crescimento",
      "en": "Growth strategy and advisory",
-     "es": "Estratégia e assessoria de crescimento",
-     "zh": "Estratégia e assessoria de crescimento",
-     "no": "Estratégia e assessoria de crescimento"
+     "es": "Estrategia y asesoría de crecimiento",
+     "zh": "增长战略与顾问服务",
+     "no": "Vekststrategi og rådgivning"
     }
    },
    {
@@ -2129,9 +2130,9 @@ footer .base{font-size:13px}
     "what": {
      "pt": "Ponta a ponta: design de serviço, desenvolvimento, lançamento e gestão",
      "en": "End to end: service design, development, launch and management",
-     "es": "Ponta a ponta: design de serviço, desenvolvimento, lançamento e gestão",
-     "zh": "Ponta a ponta: design de serviço, desenvolvimento, lançamento e gestão",
-     "no": "Ponta a ponta: design de serviço, desenvolvimento, lançamento e gestão"
+     "es": "De punta a punta: diseño de servicio, desarrollo, lanzamiento y gestión",
+     "zh": "端到端：服务设计、开发、上线与管理",
+     "no": "Ende til ende: tjenestedesign, utvikling, lansering og drift"
     }
    },
    {
@@ -2140,9 +2141,9 @@ footer .base{font-size:13px}
     "what": {
      "pt": "Plataforma própria de educação para autodidatas",
      "en": "Our own education platform for self-learners",
-     "es": "Plataforma própria de educação para autodidatas",
-     "zh": "Plataforma própria de educação para autodidatas",
-     "no": "Plataforma própria de educação para autodidatas"
+     "es": "Plataforma propia de educación para autodidactas",
+     "zh": "面向自学者的自有教育平台",
+     "no": "Egen utdanningsplattform for selvlærte"
     }
    },
    {
@@ -2151,9 +2152,9 @@ footer .base{font-size:13px}
     "what": {
      "pt": "Produto próprio em desenvolvimento",
      "en": "Our own product, in development",
-     "es": "Produto próprio em desenvolvimento",
-     "zh": "Produto próprio em desenvolvimento",
-     "no": "Produto próprio em desenvolvimento"
+     "es": "Producto propio en desarrollo",
+     "zh": "自有产品研发中",
+     "no": "Eget produkt under utvikling"
     }
    }
   ]
